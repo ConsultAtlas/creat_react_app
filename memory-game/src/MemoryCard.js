@@ -10,7 +10,7 @@ class MemoryCard extends Component {
                 <img className="DGCraft" alt="placeholder" src='https://www.digitalcrafts.com/img/DigitalCrafts-Logo-Wrench.png'/>
               </div>
               <div className="MemoryCardFront">
-                <h4>∆</h4>
+                ∆
               </div>
             </div>  
           </div>
