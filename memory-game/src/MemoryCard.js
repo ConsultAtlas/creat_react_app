@@ -5,7 +5,14 @@ class MemoryCard extends Component {
   render() {
     return (
           <div className="MemoryCard">
-            <img className="DGCraft" alt="placeholder" src='https://www.digitalcrafts.com/img/DigitalCrafts-Logo-Wrench.png'/>
+            <div className="MemoryCardInner">  
+              <div className="MemoryCardBack">
+                <img className="DGCraft" alt="placeholder" src='https://www.digitalcrafts.com/img/DigitalCrafts-Logo-Wrench.png'/>
+              </div>
+              <div className="MemoryCardFront">
+                <h4>∆</h4>
+              </div>
+            </div>  
           </div>
     );
   }

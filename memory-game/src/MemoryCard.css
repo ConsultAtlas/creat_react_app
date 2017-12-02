@@ -1,4 +1,4 @@
-.MemoryCard {
+.MemoryCardBack {
     display: inline-block;
     width: 150px;
     height: 80px;
@@ -14,6 +14,14 @@
         #465298 10px,
         #465298 20px
       );
+}
+
+.MemoryCardFront {
+
+}
+
+.MemoryCardInner {
+    
 }
 
 .DGCraft {
