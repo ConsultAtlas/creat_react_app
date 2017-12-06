@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import MemoryCard from './MemoryCard.js';
 
-generateDeck() {
+function generateDeck() {
   var symbols = ["∆", "ß", "£", "§", "•", "$", "+", "ø"];
   var deck = [];
 
   for (var i=0; i<16; i++) {
-    allCards.push({
+    deck.push({
         isFlipped: false,
         symbol: symbols[i%8]
     });
   }
-    shuffle(deck);
+  shuffle(deck);
 
-    return deck;
+  return deck;
   
 }
 
@@ -29,6 +29,7 @@ function shuffle(a) {
       a[i] = a[j];
       a[j] = x;
   }
+}
 
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      deck: [],
+      deck: {generateDeck()},
       pickedCards: []
     };
   }
