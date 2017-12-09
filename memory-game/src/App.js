@@ -44,11 +44,15 @@ class App extends Component {
   
   pickCard(cardIndex) {
     // Needs to check if you're allowed to pick this card in the first place
-    if (this.state.deck[cardIndex].isFlipped == true) {
+    if (this.state.deck[cardIndex].isFlipped === true) {
         return;
     }
     var cardToFlip = {...this.state.deck[cardIndex]}
     cardToFlip.isFlipped = true;
+    var newPcickedCards = this.state.pickedCards.concat(cardIndex);
+    var newDeck = this.state.deck.map((card, index) => {
+      return card;
+    });
     }
   
 
