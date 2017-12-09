@@ -37,12 +37,25 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      deck: {generateDeck()},
+      deck: generateDeck(),
       pickedCards: []
     };
   }
   
+  pickCard(cardIndex) {
+    // Needs to check if you're allowed to pick this card in the first place
+    if (this.state.deck[cardIndex].isFlipped == true) {
+        return;
+    }
+    var cardToFlip = {...this.state.deck[cardIndex]}
+    cardToFlip.isFlipped = true;
+    }
+  
+
   render() {
+    var cardsJSX = this.state.deck.map((card, index) => {
+      return <MemoryCard symbol={card.symbol} isFlipped={card.isFlipped} key={index}/>;
+    });
     return (
         <div className="App">
           <header className="App-header">
@@ -50,28 +63,16 @@ class App extends Component {
             <h2 className="App-subtitle">Match Cards to Win</h2>
           </header>
           <div>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+            {cardsJSX.slice(0,4)}
           </div>
           <div>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+            {cardsJSX.slice(4,8)}
           </div>
           <div>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+            {cardsJSX.slice(8,12)}
           </div>
           <div>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+            {cardsJSX.slice(12,16)}
           </div>
         </div>
     );

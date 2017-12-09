@@ -3,8 +3,8 @@ import './MemoryCard.css';
 
 class MemoryCard extends Component {
   
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {isFlipped: false};
   }
 
@@ -20,7 +20,7 @@ class MemoryCard extends Component {
     
     var memoryCardInnerClass = "MemoryCardInner"
 
-    if (this.state.isFlipped === true) {
+    if (this.props.isFlipped === true) {
       memoryCardInnerClass += " flipped";
     }
 
@@ -31,7 +31,7 @@ class MemoryCard extends Component {
                 <img className="DGCraft" alt="placeholder" src='https://www.digitalcrafts.com/img/DigitalCrafts-Logo-Wrench.png'/>
               </div>
               <div className="MemoryCardFront">
-                ∆
+                {this.props.symbol}
               </div>
             </div>  
           </div>
