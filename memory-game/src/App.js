@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
+import MemoryGame from './MemoryGame.js';
+import Ajax from './Ajax.js';
+
 
 
 class App extends Component {
@@ -10,11 +14,15 @@ class App extends Component {
     
       render() {
         return (
-          <div className="App">
-            <div>
-              <h1>App</h1>
+            <div className="App">
+                <div className="navbar">
+                    <Link to="/memory">Memory Game</Link>
+                    <Link to="/ajax">Ajax</Link>
+                </div>
+                <Switch><Route path="/" component="{MemoryGame}"/></Switch>
+                <Switch><Route path="/memory" component="{MemoryGame}"/></Switch>
+                <Switch><Route path="/ajax" component="{Ajax}"/></Switch>
             </div>
-          </div>
         );
       }
     }
