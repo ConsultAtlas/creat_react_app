@@ -3,18 +3,18 @@ import './MemoryCard.css';
 
 class MemoryCard extends Component {
   
-  constructor(props) {
-    super(props);
-    this.state = {isFlipped: false};
-  }
+  //constructor(props) {
+    //super(props);
+    //this.state = {isFlipped: false};
+  //}
 
-  clickHandler( ) {
-    this.setState({
+  //clickHandler( ) {
+    //this.setState({
       // setting isFlipped property to the opposite of whatever it is current. this.state is what pulls
       //in whatever the current state is.
-      isFlipped: !this.state.isFlipped
-    });
-  }
+      //isFlipped: !this.state.isFlipped
+    //});
+  //}
   
   render() {
     
@@ -25,7 +25,7 @@ class MemoryCard extends Component {
     }
 
     return (
-          <div className="MemoryCard" onClick={this.clickHandler.bind(this)}>
+          <div className="MemoryCard" onClick={this.props.pickCard}>
             <div className={memoryCardInnerClass}>  
               <div className="MemoryCardBack">
                 <img className="DGCraft" alt="placeholder" src='https://www.digitalcrafts.com/img/DigitalCrafts-Logo-Wrench.png'/>
