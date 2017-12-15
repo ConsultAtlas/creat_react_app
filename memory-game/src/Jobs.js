@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MemoryGame.css';
 
 
-class Ajax extends Component {
+class Jobs extends Component {
     
       constructor() {
         super();
@@ -19,4 +19,4 @@ class Ajax extends Component {
       }
     }
     
-    export default Ajax;
+    export default Jobs;
