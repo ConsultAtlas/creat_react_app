@@ -10,11 +10,11 @@ class App extends Component {
     
       constructor() {
         super();
-      }
+    }
     
       render() {
         return (
-            <div className="App">
+            <div>
                 <div className="navbar">
                     <Link to="/memory">Memory Game</Link>
                     <Link to="/jobs">Jobs</Link>
